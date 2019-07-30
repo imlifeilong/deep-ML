@@ -1,0 +1,33 @@
+【tensorflow】
+import tensorflow as tf
+
+张量
+	定义一个张量，tf.zeros([3])表示长度为3的数组，初始化为0
+	bs = tf.Variable(tf.zeros([3]))
+
+	定义一个常量
+	co = tf.constant(10)
+
+	查看bs的shape维度
+	print(bs)
+
+	sess = tf.Session()
+	初始化变量
+	sess.run(bs.initializer)
+	初始化全局所有变量
+	sess.run(tf.global_variables_initializer())
+	查看没有被初始化的变量
+	print(sess.run(tf.report_uninitialized_variables()))
+
+	查看bs的值
+	sess.run(bs)
+	
+	
+	定义一个占位符
+	n1 = tf.placeholder(tf.float32)
+	n2 = tf.placeholder(tf.float32)
+	定义公式乘法
+	out = tf.multiply(n1,n2)
+	
+	传入运算值，并计算结果
+	sess.run(out, feed_dict={n1:[3,5], n2:[6,7]})
