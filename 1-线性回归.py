@@ -43,7 +43,7 @@ loss = tf.reduce_mean(tf.square(y-y_data))
 # # 梯度 函数某一点的导数，该点变化率
 # # 梯度下降 沿梯度下降的方向求解极小值
 # # 学习率 每次进行训练时在最陡的梯度方向上所采取的「步」长
-optimizer = tf.train.GradientDescentOptimizer(0.05)
+optimizer = tf.train.GradientDescentOptimizer(0.5)
 
 # 优化函数
 train = optimizer.minimize(loss)
