@@ -59,7 +59,22 @@ import tensorflow as tf
 	na = np.zeros([2,3])
 	tf.tf.convert_to_tensor(na)
 	
+	返回数组维度
+	tf.rank(na)
 	
+	返回行列数
+	tf.shape(na)
+	
+	返回每列最大值的索引
+	tf.argmax(na, 0)
+	返回每行最大值的索引
+	tf.argmax(na, 1)
+	
+	比较数组是否相同
+	tf.equal([2,3,4, 6], [2,3,4, 5])  array([ True,  True,  True, False])
+	
+	将比较结果转换成0，1
+	tf.cast(tf.equal([2,3,4, 6], [2,3,4, 5]), 'float')
 	
 【分布】
 	均匀分布 各元素出现的概率相同
